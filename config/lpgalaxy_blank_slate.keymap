@@ -18,6 +18,7 @@
 #define NAV_L 1
 #define NUM_L 2
 #define SYM_L 3
+#define GAME_L 4
 
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
@@ -95,7 +96,7 @@
             label = "Nav";
             bindings = <
 &kp TILDE   &kp EXCL   &kp AT     &kp HASH    &kp DLLR        &kp PRCNT    &kp CARET      &kp AMPS    &kp STAR   &kp LPAR   &kp RPAR     &kp DEL
-&kp DEL     &trans     &trans     &trans      &trans          &trans       &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp PIPE     &kp GRV
+&kp DEL     &trans     &trans     &trans      &trans          &tog GAME_L       &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &kp PIPE     &kp GRAVE
 &bt BT_CLR  &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &kp MINUS      &kp EQUAL   &kp LBKT   &kp RBKT   &kp BSLH    &kp RET
 #ifdef TBLE_DUAL_2U
 &trans  &trans        &trans     &trans              &trans                    &trans       &trans         &trans &trans &trans
@@ -136,6 +137,15 @@
 #else
 &trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
 #endif
+            >;
+        };
+ game_layer {
+            label = "Game";
+            bindings = <
+ &kp N1    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
+ &kp LSHFT &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+ &kp LCTRL &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
+ &kp LALT  &kp N4     &kp N3     &kp N2      &mo NUM_L           &kp SPACE                  &mo NAV_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
             >;
         };
 
