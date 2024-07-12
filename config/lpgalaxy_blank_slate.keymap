@@ -54,8 +54,8 @@
 	};
     };
 
-// Conditional layer only when we have less thumb keys
-#ifdef TBLE_DUAL_2U
+// Conditional layers all the time!
+
     cond_layers {
         compatible = "zmk,conditional-layers";
 	tri {
@@ -63,7 +63,7 @@
 	    then-layer = <SYM_L>;
         };
     };
-#endif
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -115,7 +115,7 @@
 #ifdef TBLE_DUAL_2U
 &trans  &trans       &trans     &kp N0              &trans                 &trans            &trans         &trans &trans &trans
 #elif defined(TBLE_MIT)
-&trans  &trans       &trans     &trans      &trans      &kp N0      &trans        &trans      &trans &trans &trans
+&kp ESC &trans       &trans     &trans      &trans      &kp N0      &trans        &trans      &trans &trans &trans
 #else
 &trans  &trans       &trans     &kp N0      &trans    &none         &none     &kp ESC        &kp DEL      &trans &trans &trans
 #endif
@@ -135,6 +135,16 @@
 #else
 &trans &trans        &trans     &kp RPAR        &trans          &trans       &trans    &trans  &trans         &trans &trans &trans
 #endif
+            >;
+        };
+
+ game_layer {
+            label = "Game";
+            bindings = <
+ &kp N1    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
+ &kp LSHFT &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp QUOT
+ &kp LCTRL &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
+ &kp LALT  &kp N4     &kp N3     &kp N2      &mo NUM_L           &kp SPACE                  &mo NAV_L      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
             >;
         };
 
