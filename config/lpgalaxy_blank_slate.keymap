@@ -127,7 +127,7 @@
         sym_layer {
             label = "Sym";
             bindings = <
-&kp LS(LALT)INS     &trans   &trans   &trans    &trans     &out OUT_TOG     &trans     &out OUT_USB    &trans       &soft_off   &bootloader   &kp LS(LALT)DEL
+&kp LS(LALT)INS     &trans   &trans   &trans    &trans     &out OUT_TOG     &trans     &out OUT_USB    &trans       &trans   &bootloader   &kp LS(LALT)DEL
 &kp CAPS     &trans  &trans   &trans   &trans    &trans     &trans     &trans    &trans       &trans       &trans     &trans
 &kp KP_NUM     &trans  &trans   &trans      &trans     &out OUT_BLE     &trans     &trans    &trans       &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
