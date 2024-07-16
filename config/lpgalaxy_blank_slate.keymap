@@ -129,7 +129,7 @@
             bindings = <
 &trans     &trans   &trans   &trans    &trans     &trans     &trans     &trans    &trans       &trans       &trans     &bootloader
 &kp CAPS     &trans  &trans   &trans   &trans    &trans     &trans     &trans    &trans       &trans       &trans     &trans
-&trans     &trans  &trans   &trans      &trans     &trans     &trans     &trans    &trans       &trans       &trans     &trans
+&kp LNLCK     &trans  &trans   &trans      &trans     &trans     &trans     &trans    &trans       &trans       &trans     &trans
 #ifdef TBLE_DUAL_2U
 &trans &trans        &trans     &kp RPAR                &trans                    &trans       &trans       &trans &trans   &trans
 #elif defined(TBLE_MIT)
